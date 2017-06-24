@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zap2x</Name>
+  <Repository>aptalca/zap2xml</Repository>
+  <Registry>https://hub.docker.com/r/aptalca/zap2xml/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/aptalca/zap2xml/</Support>
+  <Overview>For my personal use only&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://mymcvrworld.duckdns.org/icons/zap2it.png</Icon>
+  <ExtraParams>--cpuset-cpus=1  --cpu-shares=2 </ExtraParams>
+  <DateInstalled>1497958725</DateInstalled>
+  <Description>For my personal use only&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/tvheadend/data/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/zap2x</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>spazmc@yahoo.com</Value>
+      <Name>EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>y3ll0b3an</Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>cache=/config/cache</Value>
+      <Name>CACHE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>TZ=America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="EMAIL" Target="EMAIL" Default="" Mode="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="false" Mask="false">spazmc@yahoo.com</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">y3ll0b3an</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="CACHE" Target="CACHE" Default="" Mode="" Description="Container Variable: CACHE" Type="Variable" Display="always" Required="false" Mask="false">cache=/config/cache</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">TZ=America/New_York</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apps/tvheadend/data/</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/zap2xml" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/apps/zap2x</Config>
+</Container>
