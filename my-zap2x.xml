@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>zap2x</Name>
+  <Name>zap2xml</Name>
   <Repository>aptalca/zap2xml</Repository>
   <Registry>https://hub.docker.com/r/aptalca/zap2xml/~/dockerfile/</Registry>
   <Network>bridge</Network>
