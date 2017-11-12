@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zap2xml</Name>
+  <Repository>aptalca/zap2xml</Repository>
+  <Registry>https://hub.docker.com/r/aptalca/zap2xml/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/aptalca/zap2xml/</Support>
+  <Overview>For my personal use only&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://mymcvrworld.duckdns.org/icons/zap2it.png</Icon>
+  <ExtraParams>--cpuset-cpus=1  --cpu-shares=8  --cap-add=SYS_NICE  --memory="64m"  --memory-swap="96m"   --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1510226563</DateInstalled>
+  <Description>For my personal use only&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/tvheadend/data/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/zap2xml</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>spazmc@yahoo.com</Value>
+      <Name>EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>y3ll0b3an</Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>cache=/config/cache</Value>
+      <Name>CACHE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>TZ=America/New_York</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>16</Value>
+      <Name>APP_NICENESS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="EMAIL" Target="EMAIL" Default="" Mode="" Description="Container Variable: EMAIL" Type="Variable" Display="always" Required="false" Mask="false">spazmc@yahoo.com</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">y3ll0b3an</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="CACHE" Target="CACHE" Default="" Mode="" Description="Container Variable: CACHE" Type="Variable" Display="always" Required="false" Mask="false">cache=/config/cache</Config>
+  <Config Name="TZ" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">TZ=America/New_York</Config>
+  <Config Name="data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apps/tvheadend/data/</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="16" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="always" Required="false" Mask="false">16</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/zap2xml" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/apps/zap2xml</Config>
+</Container>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>duckdns</Name>
+  <Repository>linuxserver/duckdns</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/duckdns/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=53906.0</Support>
+  <Overview>Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.&#xD;
+&#xD;
+First, go to duckdns site, register your subdomain and retrieve your token&#xD;
+Then run the docker create command above with your subdomain(s) and token&#xD;
+It will update your IP with the DuckDNS service every 5 minutes&#xD;
+&#xD;
+</Overview>
+  <Category>Network:DNS Tools:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/duckdns.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/duckdns.png</Icon>
+  <ExtraParams>--cpuset-cpus=1  --cpu-shares=2   --cap-add=SYS_NICE  --memory="64m"  --memory-swap="96m"   --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1508714297</DateInstalled>
+  <Description>Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.&#xD;
+&#xD;
+First, go to duckdns site, register your subdomain and retrieve your token&#xD;
+Then run the docker create command above with your subdomain(s) and token&#xD;
+It will update your IP with the DuckDNS service every 5 minutes&#xD;
+&#xD;
+</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>mymcvrworld</Value>
+      <Name>SUBDOMAINS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>f9fed2e9-4e07-4d7a-9beb-ef2441b56106</Value>
+      <Name>TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>19</Value>
+      <Name>APP_NICENESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="SUBDOMAINS" Target="SUBDOMAINS" Default="" Mode="" Description="Container Variable: SUBDOMAINS" Type="Variable" Display="always" Required="true" Mask="false">mymcvrworld</Config>
+  <Config Name="TOKEN" Target="TOKEN" Default="" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="false">f9fed2e9-4e07-4d7a-9beb-ef2441b56106</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="19" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="always" Required="false" Mask="false">19</Config>
+  <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+</Container>

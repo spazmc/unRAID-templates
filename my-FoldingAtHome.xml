@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FoldingAtHome</Name>
+  <Repository>captinsano/foldingathome</Repository>
+  <Registry>https://registry.hub.docker.com/u/captinsano/foldingathome</Registry>
+  <Network>bridge</Network>
+  <Privileged>true</Privileged>
+  <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
+  <Overview>&#xD;
+    FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]&#xD;
+    [b][span style='color: #E80000;']WARNING: Using this container will increase CPU usage, continue @ own risk[/span][/b][br]&#xD;
+	[b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+	[b]Edit the config.xml file with your preferences (Username/Team etc.)[br]&#xD;
+	[b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]&#xD;
+	[b]The WebUI is accessible through  http://IPADDRESS:7396.[br]&#xD;
+    [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]&#xD;
+  </Overview>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/AKptFCw.png</Icon>
+  <ExtraParams>--cpuset-cpus=1  --cpu-shares=2  --cpu-period=100000 --cpu-quota=30000  --cap-add=SYS_NICE  --memory="256m"  --memory-swap="384m"   --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1509585940</DateInstalled>
+  <Description>&#xD;
+    FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]&#xD;
+    [b][span style='color: #E80000;']WARNING: Using this container will increase CPU usage, continue @ own risk[/span][/b][br]&#xD;
+	[b][span style='color: #E80000;']Directions:[/span][/b][br]&#xD;
+	[b]Edit the config.xml file with your preferences (Username/Team etc.)[br]&#xD;
+	[b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]&#xD;
+	[b]The WebUI is accessible through  http://IPADDRESS:7396.[br]&#xD;
+    [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>36330</HostPort>
+        <ContainerPort>36330</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7396</HostPort>
+        <ContainerPort>7396</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/FoldingAtHome</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>19</Value>
+      <Name>APP_NICENESS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="36330" Default="36330" Mode="tcp" Description="Container Port: 36330" Type="Port" Display="always" Required="true" Mask="false">36330</Config>
+  <Config Name="Host Port 2" Target="7396" Default="7396" Mode="tcp" Description="Container Port: 7396" Type="Port" Display="always" Required="true" Mask="false">7396</Config>
+  <Config Name=" Niceness (priority)" Target="APP_NICENESS" Default="" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled).&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">19</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FoldingAtHome" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/apps/FoldingAtHome</Config>
+</Container>

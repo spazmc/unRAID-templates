@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>meehi2pd</Name>
+  <Repository>meeh/i2pd</Repository>
+  <Registry>https://hub.docker.com/r/meeh/i2pd/~/dockerfile/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/meeh/i2pd/</Support>
+  <Overview>Invisible Internet client in C++&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7070]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://mymcvrworld.duckdns.org/icons/i2pd.png</Icon>
+  <ExtraParams>--cpuset-cpus=5  --cpu-shares=2  --cap-add=SYS_NICE  --memory="64m"  --memory-swap="128m"   --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1510225814</DateInstalled>
+  <Description>Invisible Internet client in C++&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4444</HostPort>
+        <ContainerPort>4444</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4447</HostPort>
+        <ContainerPort>4447</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7070</HostPort>
+        <ContainerPort>7070</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7656</HostPort>
+        <ContainerPort>7656</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2827</HostPort>
+        <ContainerPort>2827</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7654</HostPort>
+        <ContainerPort>7654</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7650</HostPort>
+        <ContainerPort>7650</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>31000</HostPort>
+        <ContainerPort>31000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>31000</HostPort>
+        <ContainerPort>31000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/i2pd/</HostDir>
+      <ContainerDir>/var/lib/i2pd/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>12</Value>
+      <Name>APP_NICENESS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="HTTP Proxy" Target="4444" Default="4444" Mode="tcp" Description="Container Port: 4444" Type="Port" Display="always" Required="false" Mask="false">4444</Config>
+  <Config Name="SOCKS Proxy" Target="4447" Default="4447" Mode="tcp" Description="Container Port: 4447" Type="Port" Display="always" Required="false" Mask="false">4447</Config>
+  <Config Name="Web Console" Target="7070" Default="7070" Mode="tcp" Description="Container Port: 7070" Type="Port" Display="always" Required="false" Mask="false">7070</Config>
+  <Config Name="SAM Bridge" Target="7656" Default="7656" Mode="tcp" Description="Container Port: 7656" Type="Port" Display="always" Required="false" Mask="false">7656</Config>
+  <Config Name="BOB command channel" Target="2827" Default="2827" Mode="tcp" Description="Container Port: 2827" Type="Port" Display="always" Required="false" Mask="false">2827</Config>
+  <Config Name="I2CP protocol" Target="7654" Default="7654" Mode="tcp" Description="Container Port: 7654" Type="Port" Display="always" Required="false" Mask="false">7654</Config>
+  <Config Name="I2PControl protocol" Target="7650" Default="7650" Mode="tcp" Description="Container Port: 7650" Type="Port" Display="always" Required="false" Mask="false">7650</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="GUID" Target="GUID" Default="100" Mode="" Description="Container Variable: GUID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="DATA_DIR" Target="/var/lib/i2pd/" Default="" Mode="rw" Description="Container Path: /etc/profile" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apps/i2pd/</Config>
+  <Config Name="com" Target="31000" Default="31000" Mode="tcp" Description="Container Port: 31000" Type="Port" Display="always" Required="false" Mask="false">31000</Config>
+  <Config Name="com" Target="31000" Default="31000" Mode="udp" Description="Container Port: 31000" Type="Port" Display="always" Required="false" Mask="false">31000</Config>
+  <Config Name="Niceness (priority)" Target="APP_NICENESS" Default="12" Mode="" Description="Priority at which the application should run.  A niceness value of -20 is the highest priority and 19 is the lowest priority.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; Setting a negative value requires additional permissions.  Thus, &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;--cap-add=SYS_NICE&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; must be added in &amp;lt;i&amp;gt;Extra Parameters&amp;lt;/i&amp;gt; (shown when &amp;lt;i&amp;gt;Advanced View&amp;lt;/i&amp;gt; is enabled)." Type="Variable" Display="always" Required="false" Mask="false">12</Config>
+</Container>

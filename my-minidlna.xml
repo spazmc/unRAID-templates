@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>minidlna</Name>
+  <Repository>vladgh/minidlna</Repository>
+  <Registry>https://hub.docker.com/r/vladgh/minidlna/~/dockerfile/</Registry>
+  <Network>host</Network>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/vladgh/minidlna/</Support>
+  <Overview>MiniDLNA&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://mymcvrworld.duckdns.org/icons/minidlna-icon.png</Icon>
+  <ExtraParams>--cpuset-cpus=2,3,6,7  --cpu-shares=512  --memory="512m"  --memory-swap="1g"  --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1510226423</DateInstalled>
+  <Description>MiniDLNA&#xD;
+&#xD;
+[b]Converted By Community Applications[/b]</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8200</HostPort>
+        <ContainerPort>8200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1900</HostPort>
+        <ContainerPort>1900</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/miniDNLA</HostDir>
+      <ContainerDir>/etc/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/media/</HostDir>
+      <ContainerDir>/media/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>MiniDLNA</Value>
+      <Name>MINIDLNA_FRIENDLY_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>477566</Value>
+      <Name>MINIDLNA_SERIAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/media</Value>
+      <Name>MINIDLNA_MEDIA_DIR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>  inotify</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Host Port 1" Target="8200" Default="8200" Mode="tcp" Description="Container Port: 8200" Type="Port" Display="always" Required="false" Mask="false">8200</Config>
+  <Config Name="name" Target="MINIDLNA_FRIENDLY_NAME" Default="minidlna" Mode="" Description="Container Variable: MINIDLNA_FRIENDLY_NAME=minidlna" Type="Variable" Display="always" Required="false" Mask="false">MiniDLNA</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="serial number" Target="MINIDLNA_SERIAL" Default="00000000" Mode="" Description="Container Variable: MINIDLNA_SERIAL" Type="Variable" Display="always" Required="false" Mask="false">477566</Config>
+  <Config Name="config" Target="/etc/" Default="" Mode="rw" Description="Container Path: /etc/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apps/miniDNLA</Config>
+  <Config Name="Host Port 2" Target="1900" Default="1900" Mode="udp" Description="Container Port: 1900" Type="Port" Display="always" Required="false" Mask="false">1900</Config>
+  <Config Name="MEDIA" Target="/media/" Default="" Mode="rw" Description="Container Path: /media/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media/</Config>
+  <Config Name="media" Target="MINIDLNA_MEDIA_DIR" Default="/media" Mode="" Description="Container Variable: MINIDLNA_MEDIA_DIR" Type="Variable" Display="always" Required="false" Mask="false">/media</Config>
+  <Config Name="  inotify" Target="  inotify" Default="yes" Mode="" Description="Container Variable:   inotify" Type="Variable" Display="always" Required="false" Mask="false">yes</Config>
+</Container>
