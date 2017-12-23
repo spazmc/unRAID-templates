@@ -11,10 +11,10 @@
 [b]Converted By Community Applications[/b]</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:7070]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/spazmc/unRAID-templates/blob/master/my-meehi2pd.xml</TemplateURL>
   <Icon>https://mymcvrworld.duckdns.org/icons/i2pd.png</Icon>
-  <ExtraParams>--cpuset-cpus=5  --cpu-shares=2  --cap-add=SYS_NICE  --memory="64m"  --memory-swap="128m"   --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
-  <DateInstalled>1510225814</DateInstalled>
+  <ExtraParams>--cpuset-cpus=5  --cpu-shares=15  --cap-add=SYS_NICE  --memory="128m"  --memory-swap="192m"  --kernel-memory="256m"  --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <DateInstalled>1513738018</DateInstalled>
   <Description>Invisible Internet client in C++&#xD;
 &#xD;
 [b]Converted By Community Applications[/b]</Description>
