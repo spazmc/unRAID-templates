@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ncid-docker</Name>
+  <Repository>retrohunter/ncid-docker</Repository>
+  <Registry>https://hub.docker.com/r/retrohunter/ncid-docker/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/retrohunter/ncid-docker/</Support>
+  <Project/>
+  <Overview>Docker image to star the NCID (Network Caller ID) service    Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1558892978</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Docker image to star the NCID (Network Caller ID) service    Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3333</HostPort>
+        <ContainerPort>3333</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/apps/NCIDD</HostDir>
+      <ContainerDir>/etc/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/etc/" Default="" Mode="rw" Description="Container Path: /etc/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/apps/NCIDD</Config>
+  <Config Name="Host Port 1" Target="3333" Default="" Mode="tcp" Description="Container Port: 3333" Type="Port" Display="always" Required="false" Mask="false">3333</Config>
+</Container>
